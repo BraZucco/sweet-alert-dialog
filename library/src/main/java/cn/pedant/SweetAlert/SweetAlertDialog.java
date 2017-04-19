@@ -4,6 +4,7 @@ package cn.pedant.SweetAlert;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -431,6 +432,30 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     public SweetAlertDialog setNeutralButton(int resId, OnSweetClickListener listener) {
         String text = getContext().getResources().getString(resId);
         setNeutralButton(text, listener);
+        return this;
+    }
+
+    public SweetAlertDialog setConfirmButtonBG(String color) {
+        if(mConfirmButton != null && color != null && color.length() > 0) {
+            mConfirmButton.setBackgroundColor(Color.parseColor(color));
+        }
+
+        return this;
+    }
+
+    public SweetAlertDialog setCancelButtonBG(String color) {
+        if(mCancelButton != null && color != null && color.length() > 0) {
+            mCancelButton.setBackgroundColor(Color.parseColor(color));
+        }
+
+        return this;
+    }
+
+    public SweetAlertDialog setNeutralButtonBG(String color) {
+        if(mNeutralButton != null && color != null && color.length() > 0) {
+            mNeutralButton.setBackgroundColor(Color.parseColor(color));
+        }
+
         return this;
     }
 
