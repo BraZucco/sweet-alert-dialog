@@ -242,6 +242,8 @@ public class SampleActivity extends Activity implements View.OnClickListener {
 
                 dialog.setCustomView(linearLayout);
                 dialog.show();
+                break;
+
         }
     }
 }
