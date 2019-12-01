@@ -1,11 +1,10 @@
-package cn.pedant.SweetAlert;
+package com.andreseko.SweetAlert;
 
 import android.content.Context;
-
-import com.pnikosis.materialishprogress.ProgressWheel;
+import android.widget.ProgressBar;
 
 public class ProgressHelper {
-    private ProgressWheel mProgressWheel;
+    private ProgressBar mProgressWheel;
     private boolean mToSpin;
     private float mSpinSpeed;
     private int mBarWidth;
@@ -28,53 +27,53 @@ public class ProgressHelper {
         mCircleRadius = ctx.getResources().getDimensionPixelOffset(R.dimen.progress_circle_radius);
     }
 
-    public ProgressWheel getProgressWheel () {
+    public ProgressBar getProgressWheel () {
         return mProgressWheel;
     }
 
-    public void setProgressWheel (ProgressWheel progressWheel) {
+    public void setProgressWheel (ProgressBar progressWheel) {
         mProgressWheel = progressWheel;
         updatePropsIfNeed();
     }
 
     private void updatePropsIfNeed () {
         if (mProgressWheel != null) {
-            if (!mToSpin && mProgressWheel.isSpinning()) {
-                mProgressWheel.stopSpinning();
-            } else if (mToSpin && !mProgressWheel.isSpinning()) {
-                mProgressWheel.spin();
-            }
-            if (mSpinSpeed != mProgressWheel.getSpinSpeed()) {
-                mProgressWheel.setSpinSpeed(mSpinSpeed);
-            }
-            if (mBarWidth != mProgressWheel.getBarWidth()) {
-                mProgressWheel.setBarWidth(mBarWidth);
-            }
-            if (mBarColor != mProgressWheel.getBarColor()) {
-                mProgressWheel.setBarColor(mBarColor);
-            }
-            if (mRimWidth != mProgressWheel.getRimWidth()) {
-                mProgressWheel.setRimWidth(mRimWidth);
-            }
-            if (mRimColor != mProgressWheel.getRimColor()) {
-                mProgressWheel.setRimColor(mRimColor);
-            }
-            if (mProgressVal != mProgressWheel.getProgress()) {
-                if (mIsInstantProgress) {
-                    mProgressWheel.setInstantProgress(mProgressVal);
-                } else {
-                    mProgressWheel.setProgress(mProgressVal);
-                }
-            }
-            if (mCircleRadius != mProgressWheel.getCircleRadius()) {
-                mProgressWheel.setCircleRadius(mCircleRadius);
-            }
+//            if (!mToSpin && mProgressWheel.isAnimating()) {
+//                mProgressWheel.stopSpinning();
+//            } else if (mToSpin && !mProgressWheel.isSpinning()) {
+//                mProgressWheel.spin();
+//            }
+//            if (mSpinSpeed != mProgressWheel.getSpinSpeed()) {
+//                mProgressWheel.setSpinSpeed(mSpinSpeed);
+//            }
+//            if (mBarWidth != mProgressWheel.getBarWidth()) {
+//                mProgressWheel.setBarWidth(mBarWidth);
+//            }
+//            if (mBarColor != mProgressWheel.getBarColor()) {
+//                mProgressWheel.setBarColor(mBarColor);
+//            }
+//            if (mRimWidth != mProgressWheel.getRimWidth()) {
+//                mProgressWheel.setRimWidth(mRimWidth);
+//            }
+//            if (mRimColor != mProgressWheel.getRimColor()) {
+//                mProgressWheel.setRimColor(mRimColor);
+//            }
+//            if (mProgressVal != mProgressWheel.getProgress()) {
+//                if (mIsInstantProgress) {
+//                    mProgressWheel.setInstantProgress(mProgressVal);
+//                } else {
+//                    mProgressWheel.setProgress(mProgressVal);
+//                }
+//            }
+//            if (mCircleRadius != mProgressWheel.getCircleRadius()) {
+//                mProgressWheel.setCircleRadius(mCircleRadius);
+//            }
         }
     }
 
     public void resetCount() {
         if (mProgressWheel != null) {
-            mProgressWheel.resetCount();
+//            mProgressWheel.resetPivot();
         }
     }
 
