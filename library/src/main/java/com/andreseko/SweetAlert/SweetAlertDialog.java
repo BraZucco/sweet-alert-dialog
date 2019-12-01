@@ -1,15 +1,10 @@
-package cn.pedant.SweetAlert;
+package com.andreseko.SweetAlert;
 
 
-import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -21,11 +16,9 @@ import android.view.animation.Transformation;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.pnikosis.materialishprogress.ProgressWheel;
-
-import java.nio.channels.Selector;
 import java.util.List;
 
 public class SweetAlertDialog extends Dialog implements View.OnClickListener {
@@ -180,7 +173,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         mNeutralButton = (Button) findViewById(R.id.neutral_button);
         mNeutralButton.setOnClickListener(this);
         mNeutralButton.setOnTouchListener(Constants.FOCUS_TOUCH_LISTENER);
-        mProgressHelper.setProgressWheel((ProgressWheel) findViewById(R.id.progressWheel));
+        mProgressHelper.setProgressWheel((ProgressBar) findViewById(R.id.progressWheel));
 
         setTitleText(mTitleText);
         setContentText(mContentText);

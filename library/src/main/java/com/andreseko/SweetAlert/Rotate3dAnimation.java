@@ -1,4 +1,4 @@
-package cn.pedant.SweetAlert;
+package com.andreseko.SweetAlert;
 
 import android.content.Context;
 import android.content.res.TypedArray;
